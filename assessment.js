@@ -6,7 +6,11 @@
  */
 
 // CODE HERE
-
+var me = {
+firstname:"Gunnar",
+age:21,
+state:"Utah"
+};
 /**
  * #2
  *
@@ -15,7 +19,7 @@
  */
 
 // CODE HERE
-
+me.faveColor = "Red";
 /**
  * #3
  *
@@ -30,7 +34,7 @@ var message = {
 };
 // DON'T TOUCH THE CODE ABOVE
 // CODE HERE
-
+message["text"] = "Love";
 /**
  * #4
  *
@@ -40,6 +44,10 @@ var message = {
  */
 
 // CODE HERE
+var adjustCount = {
+  upVote: function (num){num+=1;return num},
+  downVote: function(num){num-=1;return num}
+};
 
 /**
  * #5
@@ -48,7 +56,7 @@ var message = {
  */
 
 // CODE HERE
-
+var myFriends = ["Austin", "Timmy", "Maurice", "Daisy"];
 /**
  * #6
  *
@@ -56,7 +64,7 @@ var message = {
  */
 
 // CODE HERE
-
+myFriends.push("Aysia");
 /**
  * #7
  *
@@ -68,6 +76,7 @@ var message = {
 var myArray = [1, 2, 3, 4];
 // DON'T TOUCH THE CODE ABOVE
 // CODE HERE
+var myArrayCopy = myArray.slice();
 
 /**
  * #8
@@ -80,8 +89,9 @@ var myArray = [1, 2, 3, 4];
 var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
 function evensOnly() {
-  // CODE HERE
-}
+ var array = myNumbers.filter(myNumbers => myNumbers % 2 === 0 );
+return array;
+};
 
 /**
  * #9
@@ -100,6 +110,8 @@ var peopleIknow = [
   { name: "Holly", friend: true }
 ];
 
+var trueFriends = peopleIknow.filter(peopleIknow => peopleIknow.friend === true);
+
 /**
  * #10
  *
@@ -110,3 +122,17 @@ var peopleIknow = [
  */
 
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
+
+var indexes = [];
+
+function indexFinder(array){
+  
+
+  for(i=0;i < array.length;i++){indexes.push(i)};
+
+  return indexes;
+};
+
+indexFinder(randomNumbers);
+
+
